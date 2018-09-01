@@ -4,7 +4,7 @@ import qs from 'qs';
 import { AxiosResponse, AxiosRequestConfig } from 'axios';
 
 const axiosConfig: AxiosRequestConfig = {
-  baseURL: 'http://localhost:9000/',
+  baseURL: process.env.VUE_APP_API_ROOT,
   // 请求后的数据处理
   transformResponse: [function (data: AxiosResponse) {
     return data;

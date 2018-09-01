@@ -1,6 +1,6 @@
 import Cookies from 'universal-cookie';
-import { CookieDomain } from '@/config';
 
+const CookieDomain = process.env.VUE_APP_CookieDomain;
 const cookies = new Cookies();
 
 let cookieConfig = {};
