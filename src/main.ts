@@ -13,7 +13,7 @@ import './filters';
 import './utils/validators';
 
 Vue.config.productionTip = true;
-Vue.config.devtools = true;
+// Vue.config.devtools = true;
 
 new Vue({
   router,

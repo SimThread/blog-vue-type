@@ -15,9 +15,8 @@ import showmsg from '@/store/modules/showmsg';
 import actions from './actions';
 import getters from './getters';
 
-
-Vue.use(Vuex);
 Vue.config.devtools = true;
+Vue.use(Vuex);
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,

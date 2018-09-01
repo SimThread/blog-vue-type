@@ -91,6 +91,7 @@ export default class Navbar extends Vue {
   created() {
     document.body.className = this.styleMode;
     console.log('this.auth', this.auth);
+    console.log('cookie:', getCookie);
     if (this.auth.token) {
       this.getUserInfo();
     }
