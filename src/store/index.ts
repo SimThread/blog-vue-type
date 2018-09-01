@@ -17,6 +17,7 @@ import getters from './getters';
 
 
 Vue.use(Vuex);
+Vue.config.devtools = true;
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
