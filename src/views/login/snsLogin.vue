@@ -10,8 +10,9 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { API_ROOT } from '@/config';
 import { getCookie, isLogin } from '@/utils/authService';
+
+const API_ROOT = process.env.VUE_APP_API_ROOT;
 
 @Component
 export default class SnsLogin extends Vue {

@@ -1,10 +1,11 @@
-import { API_ROOT } from '@/config';
 import {
   CHANGE_STYLE_MODE,
   GET_INDEX_IMG,
   GET_CAPTCHAURL,
 } from '@/store/types';
 import { getCookie, saveCookie } from '@/utils/authService';
+
+const API_ROOT = process.env.VUE_APP_API_ROOT;
 
 const state = {
   indexImg: '',
