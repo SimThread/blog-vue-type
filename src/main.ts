@@ -12,7 +12,7 @@ import './assets/styles/index.css';
 import './filters';
 import './utils/validators';
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = true;
 Vue.config.devtools = true;
 
 new Vue({
