@@ -17,8 +17,8 @@ export const addNewComment = (data: any) => {
 
 export const addNewReply = (data: any) => {
   const req = {
-    url: 'comment/addNewReply',
-    data,
+    url: `comment/${data.cid}/addNewReply`,
+    data: data.data,
   };
   return _post(req);
 };
