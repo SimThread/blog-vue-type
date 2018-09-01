@@ -2,6 +2,7 @@ import http from 'http';
 import https from 'https';
 import qs from 'qs';
 import { AxiosResponse, AxiosRequestConfig } from 'axios';
+import { getCookie, signOut, isLogin } from '@/utils/authService';
 
 const axiosConfig: AxiosRequestConfig = {
   baseURL: process.env.VUE_APP_API_ROOT,
@@ -9,6 +10,7 @@ const axiosConfig: AxiosRequestConfig = {
   transformResponse: [function (data: AxiosResponse) {
     return data;
   }],
+  headers: {},
   // 查询对象序列化函数
   paramsSerializer(params: any) {
     return qs.stringify(params);
@@ -33,5 +35,9 @@ const axiosConfig: AxiosRequestConfig = {
   httpAgent: new http.Agent({ keepAlive: true }),
   httpsAgent: new https.Agent({ keepAlive: true }),
 };
+
+if (isLogin()) {
+  axiosConfig.headers.Authorization = `Bearer ${getCookie('token').replace(/(^")|("$)/g, '')}`;
+}
 
 export default axiosConfig;
