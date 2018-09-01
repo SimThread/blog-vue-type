@@ -2,7 +2,7 @@ import http from 'http';
 import https from 'https';
 import qs from 'qs';
 import { AxiosResponse, AxiosRequestConfig } from 'axios';
-import { getCookie, signOut, isLogin } from '@/utils/authService';
+import { getCookie, isLogin } from '@/utils/authService';
 
 const axiosConfig: AxiosRequestConfig = {
   baseURL: process.env.VUE_APP_API_ROOT,

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import config from '@/utils/config';
+import { signOut } from '@/utils/authService';
 
 // 取消重复请求
 const pending: Array<{
@@ -41,6 +42,11 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (res) => {
     removePending(res.config);
+    console.log('res:', res);
+    if (res.status === 401) {
+      signOut();
+      window.location.pathname = '/login';
+    }
     return res;
   },
   error => Promise.reject(error),
