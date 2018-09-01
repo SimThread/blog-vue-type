@@ -38,5 +38,5 @@ export default new Vuex.Store({
     tagList,
     showmsg,
   },
-  plugins: [vuexLocal.plugin],
+  // plugins: [vuexLocal.plugin],
 });

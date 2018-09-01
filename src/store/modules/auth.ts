@@ -10,6 +10,7 @@ import router from '@/router';
 import { localLogin } from '@/service/auth';
 import { getMe, mdUser } from '@/service/user';
 
+console.log('auth token', getCookie('token'));
 const state = {
   token: getCookie('token') || null,
   user: null,
