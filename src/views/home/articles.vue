@@ -24,11 +24,11 @@
         <div class="list-footer">
           <span>阅读 {{article.visit_count}}</span>
           <span> · 评论 {{article.comment_count}}</span>
-          <span> · 喜欢 {{article.like_count}}</span>
+          <!-- <span> · 喜欢 {{article.like_count}}</span> -->
         </div>
       </div>
     </li>
-    <li v-if="articleList.length < 1" class="no-content">正在大力回车...</li>
+    <li v-if="articleList.length < 1" class="no-content">正在加载中...</li>
   </ul>
 </template>
 

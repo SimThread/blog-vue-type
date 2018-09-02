@@ -1,10 +1,10 @@
 <template>
   <div class="article-box">
     <ArtickeContent :article-detail="articleDetail"></ArtickeContent>
-    <Like
+    <!-- <Like
       @toggleLike="handleToggleLike"
       :like-count="articleDetail.like_count"
-      :is-like="articleDetail.isLike"></Like>
+      :is-like="articleDetail.isLike"></Like> -->
     <Prenext :prev-article="prevArticle" :next-article="nextArticle"></Prenext>
     <Comment
       @openLoginModal="openLoginModal"
@@ -40,7 +40,8 @@ export default class Article extends Vue {
   @State(({ articleDetail }) => articleDetail.item) articleDetail:any
   @State(({ auth }) => auth.user) user:any
   @State(({ prenextArticle }) => prenextArticle.next) nextArticle:any
-  @State(({ prenextArticle }) => prenextArticle.prev) prevArticle:any
+  @State(({ prenextArticle }
+) => prenextArticle.prev) prevArticle:any
   @State(({ commentList }) => commentList.items) commentList:any
   @State(({ options }) => options.item) options:any
   @State(({ route }) => route.params.aid) aid:any
