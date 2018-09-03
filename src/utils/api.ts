@@ -46,6 +46,8 @@ service.interceptors.response.use(
     if (res.status === 401) {
       signOut();
       window.location.pathname = '/login';
+    } else if (res.status === 422) {
+      alert(res.data.error_msg);
     }
     return res;
   },
